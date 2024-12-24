@@ -1,0 +1,78 @@
+.tudo {
+    font-family: Arial, sans-serif;
+    text-align: left;
+    width: 100%;
+    
+}
+.sessão {
+    margin-bottom: 20px;
+    
+    
+}
+.sessão h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    
+}
+.grupo-caixinha {
+    display: flex;
+    gap: 20px;
+}
+.grupo-caixinha div {
+    width: 50%;
+    
+}
+.grupo-caixinha label {
+    display: block;
+    margin-bottom: 5px;
+    
+}
+
+
+.corpo {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: left;
+}
+
+.formation-group {
+    margin-bottom: 20px;
+}
+
+.formation-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formation-group input[type="text"],
+.formation-group textarea,
+.formation-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formation-group textarea {
+    height: 100px;
+}
+
+.formation-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formation-row .formation-group {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.formation-row .formation-group:last-child {
+    margin-right: 0;
+}
+
+hr {
+    margin: 40px 0;
+}

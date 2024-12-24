@@ -1,0 +1,758 @@
+<html>
+
+<head>
+    <title>
+        Cadastro
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cursos.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background-color: orange;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .header h1 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .header a {
+            color: white;
+            margin-left: auto;
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container h2 {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .accordion {
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+
+        .accordion button {
+            width: 100%;
+            background-color: orange;
+            color: white;
+            padding: 15px;
+            border: none;
+            text-align: left;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.3s ease;
+            position: relative;
+        }
+
+        .accordion button:hover {
+            background-color: #db4c18;
+        }
+
+        .accordion button:after {
+            content: '\002B';
+            font-size: 13px;
+            color: white;
+            float: right;
+        }
+
+        .accordion button.active:after {
+            content: "\2212";
+        }
+
+        .panel {
+            max-height: 0;
+            overflow: hidden;
+            background-color: white;
+            padding: 0 15px;
+            transition: max-height 0.3s ease;
+            border: 1px solid #ddd;
+            margin-top: 5px;
+        }
+
+        .panel p {
+            padding: 10px 0;
+            margin: 0;
+        }
+
+        .buttons {
+            margin: 20px auto;
+            max-width: 600px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .buttons button {
+            width: 48%;
+            padding: 15px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .buttons .save {
+            background-color: orange;
+            color: white;
+            transition: transform 0.5s ease;
+        }
+
+        .save:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .buttons .back {
+            background-color: white;
+            color: #333;
+            border: 1px solid #ccc;
+            transition: transform 0.5s ease;
+        }
+
+        .back:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .cadastrado {
+            text-decoration: none;
+        }
+
+        .cadastrado:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img alt="Logo" style="border-radius: 25px;" height="30" src="default.png" width="30" />
+        <a href="index.html"><h1>
+            Quero estágio
+        </h1></a>
+        <a href="login.html" class="cadastrado">
+            Já sou cadastrado
+        </a>
+    </div>
+    <div class="container">
+        <h2>
+            Informe dados para cadastro
+        </h2>
+        <form action="back/cad_aluno.php" method="POST">
+        <div class="accordion">
+            <button class="accordion-btn">Dados Pessoais</button>
+            <div class="panel">
+
+                <div class="form-group" style="margin-top: 10px;">
+                    <label for="nome-completo">Nome completo</label>
+                    <input type="text" id="nome-completo" placeholder="Nome completo" required> 
+                </div>
+                <div class="form-group">
+                    <label for="nome-social">Nome social</label>
+                    <input type="text" id="nome-social" placeholder="Nome social (opcional)">
+                </div>
+                <div class="form-group">
+                    <label for="sexo">Sexo</label>
+                    <select id="sexo" required>
+                        <option>Selecione</option>
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                    </select>
+                </div>
+
+                <!-- Telefone 1 Section -->
+                <div class="form-group">
+                    <label for="telefone1">Telefone 1</label>
+                    <div class="flex">
+                        <select class="small-input">
+                            <option>Selecione</option>
+                            <option>Residencial</option>
+                            <option>Comercial</option>
+                            <option>Celular</option>
+                        </select>
+                        <input type="text" id="telefone1" class="large-input" placeholder="(xx)xxxxx-xxxx" required>
+                    </div>
+                </div>
+
+                <!-- Telefone 2 Section -->
+                <div class="form-group">
+                    <label for="telefone2">Telefone 2</label>
+                    <div class="flex">
+                        <select class="small-input">
+                            <option>Selecione</option>
+                            <option>Residencial</option>
+                            <option>Comercial</option>
+                            <option>Celular</option>
+                        </select>
+                        <input type="text" id="telefone2" class="large-input" placeholder="(xx)xxxxx-xxxx">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="data-nascimento">Data de Nascimento</label>
+                    <input type="date" id="data-nascimento" placeholder="dd/mm/aaaa" required>
+                </div>
+                <div class="form-group">
+                    <label for="cpf">Cpf</label>
+                    <input type="text" id="cpf" placeholder="xxx.xxx.xxx-xx" required>
+                </div>
+
+                <!-- RG Section -->
+                <div class="form-group">
+                    <label for="rg">RG</label>
+                    <div class="flex">
+                        <input type="text" id="rg" placeholder="Número" class="half-width" required>
+                        <input type="text" placeholder="Orgão emissor" class="half-width" required>
+                    </div>
+                </div>
+
+                <!-- Email Section -->
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <div class="flex">
+                        <input type="email" id="email" placeholder="Email" class="half-width" required>
+                        <input type="email" placeholder="Confirmação do E-mail" class="half-width" required>
+                    </div>
+                </div>
+
+                <!-- Senha Section -->
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <div class="flex">
+                        <input type="password" id="senha" placeholder="Senha" class="half-width" required>
+                        <input type="password" placeholder="Confirmação de senha" class="half-width" required>
+                    </div>
+                </div>
+            </div>
+
+            <button class="accordion-btn">Endereço</button>
+            <div class="panel">
+                <div style="font-family: Arial, sans-serif; margin: 20px;">
+                    <div style="margin-bottom: 20px;">
+                        <label for="uf"
+                            style="display: block; font-weight: bold; margin-bottom: 5px; text-align: left;">UF</label>
+                        <select id="uf" name="uf" required
+                            style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+                            <option value="">Selecione a UF</option>
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AP">AP</option>
+                            <option value="AM">AM</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="MG">MG</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PR">PR</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SP">SP</option>
+                            <option value="SE">SE</option>
+                            <option value="TO">TO</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label for="cidade" 
+                            style="display: block; font-weight: bold; margin-bottom: 5px; text-align: left;">Cidade</label>
+                        <input type="text" id="cidade" name="cidade" required
+                            style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label for="bairro"
+                            style="display: block; font-weight: bold; margin-bottom: 5px; text-align: left;">Bairro</label>
+                        <input type="text" id="bairro" name="bairro"
+                            style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label for="endereco"
+                            style="display: block; font-weight: bold; margin-bottom: 5px; text-align: left;">Endereço</label>
+                        <input type="text" id="endereco" name="endereco" required
+                            style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label for="complemento"
+                            style="display: block; font-weight: bold; margin-bottom: 5px; text-align: left;">Complemento</label>
+                        <input type="text" id="complemento" name="complemento"
+                            style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+                    </div>
+                </div>
+            </div>
+            
+
+
+            <button class="accordion-btn">Escolaridade</button>
+            <div class="panel">
+                <div style="font-family: Arial, sans-serif; margin: 20px; text-align: left;">
+                    <label style="display: block; margin-top: 20px; font-weight: bold;" for="grau-instrucao">Grau de
+                        Instrução</label>
+                    <select id="grau-instrucao" name="grau-instrucao" required
+                        style="width: 300px; padding: 8px; margin-top: 5px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px;">
+                        <option value="">Selecione</option>
+                        <option value="">Médio</option>
+                        <option value="">Superior</option>
+                        <option value="">Técnico</option>
+                    </select>
+
+                    <label style="display: block; margin-top: 20px; font-weight: bold;"
+                        for="matricula">Matrícula</label>
+                    <input type="text" id="matricula" name="matricula" required
+                        style="width: 300px; padding: 8px; margin-top: 5px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px;">
+
+                    <label style="display: block; margin-top: 20px; font-weight: bold;">Horário Disponível</label>
+                    <div class="checkbox-group" style="margin-top: 10px;"> 
+                        <input type="checkbox" id="manha-disponivel" name="horario-disponivel" value="manha"> 
+                        <label style="font-weight: normal; margin-left: 5px;" for="manha-disponivel">Manhã</label>
+                        <br>
+                        <input type="checkbox" id="tarde-disponivel" name="horario-disponivel" value="tarde">
+                        <label style="font-weight: normal; margin-left: 5px;" for="tarde-disponivel">Tarde</label>
+                        <br>
+                        <input type="checkbox" id="noite-disponivel" name="horario-disponivel" value="noite">
+                        <label style="font-weight: normal; margin-left: 5px;" for="noite-disponivel">Noite</label>
+                    </div>
+
+                    <label style="display: block; margin-top: 20px; font-weight: bold;">Horário de Estudo</label>
+                    <div class="checkbox-group" style="margin-top: 10px;">
+                        <input type="checkbox" id="manha-estudo" name="horario-estudo" value="manha">
+                        <label style="font-weight: normal; margin-left: 5px;" for="manha-estudo">Manhã</label>
+                        <br>
+                        <input type="checkbox" id="tarde-estudo" name="horario-estudo" value="tarde">
+                        <label style="font-weight: normal; margin-left: 5px;" for="tarde-estudo">Tarde</label>
+                        <br>
+                        <input type="checkbox" id="noite-estudo" name="horario-estudo" value="noite">
+                        <label style="font-weight: normal; margin-left: 5px;" for="noite-estudo">Noite</label>
+                        <br>
+                        <input type="checkbox" id="online-estudo" name="horario-estudo" value="online">
+                        <label style="font-weight: normal; margin-left: 5px;" for="online-estudo">Online</label>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="accordion-btn">Cursos</button>
+            <div class="panel">
+                <div style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #fff;">
+                    <div style="width: 50%; padding: 20px;">
+                        <h2 style="font-size: 18px; font-weight: bold; margin-bottom: 20px;">Idiomas</h2>
+                        <div style="margin-bottom: 20px; display: flex; align-items: center;">
+                            <label for="ingles"
+                                style="font-weight: bold; margin-right: 10px; width: 100px;">Inglês</label>
+                            <select id="ingles"
+                                style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;">
+                                <option>Nenhum</option>
+                                <option>Básico</option>
+                                <option>Intermediário</option>
+                                <option>Avançado</option>
+                            </select>
+                        </div>
+                        <div style="margin-bottom: 20px; display: flex; align-items: center;">
+                            <label for="frances"
+                                style="font-weight: bold; margin-right: 10px; width: 100px;">Francês</label>
+                            <select id="frances"
+                                style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;">
+                                <option>Nenhum</option>
+                                <option>Básico</option>
+                                <option>Intermediário</option>
+                                <option>Avançado</option>
+                            </select>
+                        </div>
+                        <div style="margin-bottom: 20px; display: flex; align-items: center;">
+                            <label for="espanhol"
+                                style="font-weight: bold; margin-right: 10px; width: 100px;">Espanhol</label>
+                            <select id="espanhol"
+                                style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px;">
+                                <option>Nenhum</option>
+                                <option>Básico</option>
+                                <option>Intermediário</option>
+                                <option>Avançado</option>
+                            </select>
+                           
+
+
+
+                        </div> 
+                        <div style="clear: both;"></div>
+                        <div class="tudo">
+                            <div class="caixinha">
+                                <div class="sessão">
+                                    <h2>Conhecimentos em informática</h2>
+                                    <div class="grupo-caixinha">
+                                        <div>
+                                            <label><input type="checkbox"> ACCESS</label>
+                                            <label><input type="checkbox"> ASP</label>
+                                            <label><input type="checkbox"> COREL DRAW</label>
+                                            <label><input type="checkbox"> DIGITAÇÃO</label>
+                                            <label><input type="checkbox"> FLASH</label>
+                                            <label><input type="checkbox"> GESTÃO FINANCEIRA (TECNOLOGIA)</label>
+                                            <label><input type="checkbox"> HTML</label>
+                                            <label><input type="checkbox"> JAVA</label>
+                                            <label><input type="checkbox"> PHOTOSHOP</label>
+                                            <label><input type="checkbox"> POWER POINT</label>
+                                            <label><input type="checkbox"> REDE MAKER</label>
+                                            <label><input type="checkbox"> VISUAL BASIC</label>
+                                            <label><input type="checkbox"> WINDOWS</label>
+                                        </div>
+                                        <div>
+                                            <label><input type="checkbox"> ADOBE PAGEMAKER</label>
+                                            <label><input type="checkbox"> AUTO CAD</label>
+                                            <label><input type="checkbox"> DELPHI</label>
+                                            <label><input type="checkbox"> EXCEL</label>
+                                            <label><input type="checkbox"> FRONTPAGE</label>
+                                            <label><input type="checkbox"> HARDWARE</label>
+                                            <label><input type="checkbox"> INTERNET</label>
+                                            <label><input type="checkbox"> LINUX</label>
+                                            <label><input type="checkbox"> PHP / MYSQL</label>
+                                            <label><input type="checkbox"> PROGRAMAÇÃO</label>
+                                            <label><input type="checkbox"> REDES</label>
+                                            <label><input type="checkbox"> WEB DESIGN</label>
+                                            <label><input type="checkbox"> WORD</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sessão">
+                                    <h2>Aperfeiçoamento / Experiência</h2>
+                                    <div class="grupo-caixinha">
+                                        <div>
+                                            <label><input type="checkbox"> AERÓBICA</label>
+                                            <label><input type="checkbox"> ÁREA JURÍDICA</label>
+                                            <label><input type="checkbox"> ATENDIMENTO AO PÚBLICO</label>
+                                            <label><input type="checkbox"> CRÉDITO E COBRANÇA</label>
+                                            <label><input type="checkbox"> ELETRÔNICA</label>
+                                            <label><input type="checkbox"> ENFERMAGEM</label>
+                                            <label><input type="checkbox"> HIDROGINÁSTICA</label>
+                                            <label><input type="checkbox"> LOGISTICA</label>
+                                            <label><input type="checkbox"> MONITOR DE RECREAÇÃO</label>
+                                            <label><input type="checkbox"> MUSCULAÇÃO</label>
+                                            <label><input type="checkbox"> OPERADOR DE MICRO</label>
+                                            <label><input type="checkbox"> PUBLICIDADE E PROPAGANDA</label>
+                                            <label><input type="checkbox"> RECURSOS HUMANOS</label>
+                                            <label><input type="checkbox"> ROTINAS ADMINISTRATIVAS</label>
+                                            <label><input type="checkbox"> TÉCNICO EM INFORMÁTICA</label>
+                                            <label><input type="checkbox"> TELEFONISTA E RECEPCIONISTA</label>
+                                            <label><input type="checkbox"> TRANSAÇÕES IMOBILIÁRIAS</label>
+                                            <label><input type="checkbox"> VENDAS</label>
+                        
+                                        </div>
+                                        <div>
+                                            <label><input type="checkbox"> ÁREA CONTÁBIL</label>
+                                            <label><input type="checkbox"> ASSISTENTE EDUCACIONAL</label>
+                                            <label><input type="checkbox"> AUXILIAR DE ESCRITÓRIO</label>
+                                            <label><input type="checkbox"> ELETRICIDADE BÁSICA</label>
+                                            <label><input type="checkbox"> ELETROTÉCNICA</label>
+                                            <label><input type="checkbox"> GINÁSTICA</label>
+                                            <label><input type="checkbox"> JORNAL</label>
+                                            <label><input type="checkbox"> MARKETING</label>
+                                            <label><input type="checkbox"> MONTAGEM E CONFIGURAÇÃO</label>
+                                            <label><input type="checkbox"> NATAÇÃO</label>
+                                            <label><input type="checkbox"> OPERADOR DE TELEMARKETING</label>
+                                            <label><input type="checkbox"> RÁDIO</label>
+                                            <label><input type="checkbox"> REVISTA</label>
+                                            <label><input type="checkbox"> SECRETÁRIA</label>
+                                            <label><input type="checkbox"> TELECOMUNICAÇÕES</label>
+                                            <label><input type="checkbox"> TELEVISÃO</label>
+                                            <label><input type="checkbox"> TURISMO E HOTELARIA</label>
+                                            <label><input type="checkbox"> WEB DESIGNER</label>
+                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                    </div>
+                </div>
+            </div>
+           
+
+
+
+            <button class="accordion-btn">Experiência Profissional</button>
+            <div class="panel">
+                <div class="corpo">
+                    <!-- Empresa 1 -->
+                    <div class="formation-group">
+                        <label for="empresa1">Empresa</label>
+                        <input type="text" id="empresa1" name="empresa1" placeholder="Nome da empresa">
+                    </div>
+                    <div class="formation-group">
+                        <label for="atribuicoes1">Atribuições</label>
+                        <textarea id="atribuicoes1" name="atribuicoes1"></textarea>
+                    </div>
+                    <div class="formation-row">
+                        <div class="formation-group">
+                            <label for="entrada-mes1">Entrada</label>
+                            <select id="entrada-mes1" name="entrada-mes1">
+                                <option value="" selected disabled>Selecione o mês</option>
+                                <option value="janeiro">Janeiro</option>
+                                <option value="fevereiro">Fevereiro</option>
+                                <option value="marco">Março</option>
+                                <option value="abril">Abril</option>
+                                <option value="maio">Maio</option>
+                                <option value="junho">Junho</option>
+                                <option value="julho">Julho</option>
+                                <option value="agosto">Agosto</option>
+                                <option value="setembro">Setembro</option>
+                                <option value="outubro">Outubro</option>
+                                <option value="novembro">Novembro</option>
+                                <option value="dezembro">Dezembro</option>
+                            </select>
+                        </div>
+                        <div class="formation-group">
+                            <label for="entrada-ano1">&nbsp;</label>
+                            <select id="entrada-ano1" name="entrada-ano1">
+                                <option value="" selected disabled>Selecione o ano</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="formation-row">
+                        <div class="formation-group">
+                            <label for="saida-mes1">Saída</label>
+                            <select id="saida-mes1" name="saida-mes1">
+                                <option value="" selected disabled>Selecione o mês</option>
+                                <option value="janeiro">Janeiro</option>
+                                <option value="fevereiro">Fevereiro</option>
+                                <option value="marco">Março</option>
+                                <option value="abril">Abril</option>
+                                <option value="maio">Maio</option>
+                                <option value="junho">Junho</option>
+                                <option value="julho">Julho</option>
+                                <option value="agosto">Agosto</option>
+                                <option value="setembro">Setembro</option>
+                                <option value="outubro">Outubro</option>
+                                <option value="novembro">Novembro</option>
+                                <option value="dezembro">Dezembro</option>
+                            </select>
+                        </div>
+                        <div class="formation-group">
+                            <label for="saida-ano1">&nbsp;</label>
+                            <select id="saida-ano1" name="saida-ano1">
+                                <option value="" selected disabled>Selecione o ano</option>
+                            </select>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- Empresa 2 -->
+                    <div class="formation-group">
+                        <label for="empresa2">Empresa</label>
+                        <input type="text" id="empresa2" name="empresa2" placeholder="Nome da empresa">
+                    </div>
+                    <div class="formation-group">
+                        <label for="atribuicoes2">Atribuições</label>
+                        <textarea id="atribuicoes2" name="atribuicoes2"></textarea>
+                    </div>
+                    <div class="formation-row">
+                        <div class="formation-group">
+                            <label for="entrada-mes2">Entrada</label>
+                            <select id="entrada-mes2" name="entrada-mes2">
+                                <option value="" selected disabled>Selecione o mês</option>
+                                <option value="janeiro">Janeiro</option>
+                                <option value="fevereiro">Fevereiro</option>
+                                <option value="marco">Março</option>
+                                <option value="abril">Abril</option>
+                                <option value="maio">Maio</option>
+                                <option value="junho">Junho</option>
+                                <option value="julho">Julho</option>
+                                <option value="agosto">Agosto</option>
+                                <option value="setembro">Setembro</option>
+                                <option value="outubro">Outubro</option>
+                                <option value="novembro">Novembro</option>
+                                <option value="dezembro">Dezembro</option>
+                            </select>
+                        </div>
+                        <div class="formation-group">
+                            <label for="entrada-ano2">&nbsp;</label>
+                            <select id="entrada-ano2" name="entrada-ano2">
+                                <option value="" selected disabled>Selecione o ano</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="formation-row">
+                        <div class="formation-group">
+                            <label for="saida-mes2">Saída</label>
+                            <select id="saida-mes2" name="saida-mes2">
+                                <option value="" selected disabled>Selecione o mês</option>
+                                <option value="janeiro">Janeiro</option>
+                                <option value="fevereiro">Fevereiro</option>
+                                <option value="marco">Março</option>
+                                <option value="abril">Abril</option>
+                                <option value="maio">Maio</option>
+                                <option value="junho">Junho</option>
+                                <option value="julho">Julho</option>
+                                <option value="agosto">Agosto</option>
+                                <option value="setembro">Setembro</option>
+                                <option value="outubro">Outubro</option>
+                                <option value="novembro">Novembro</option>
+                                <option value="dezembro">Dezembro</option>
+                            </select>
+                        </div>
+                        <div class="formation-group">
+                            <label for="saida-ano2">&nbsp;</label>
+                            <select id="saida-ano2" name="saida-ano2">
+                                <option value="" selected disabled>Selecione o ano</option>
+                            </select>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- Empresa 3 -->
+                    <div class="formation-group">
+                        <label for="empresa3">Empresa</label>
+                        <input type="text" id="empresa3" name="empresa3" placeholder="Nome da empresa">
+                    </div>
+                    <div class="formation-group">
+                        <label for="atribuicoes3">Atribuições</label>
+                        <textarea id="atribuicoes3" name="atribuicoes3"></textarea>
+                    </div>
+                    <div class="formation-row">
+                        <div class="formation-group">
+                            <label for="entrada-mes3">Entrada</label>
+                            <select id="entrada-mes3" name="entrada-mes3">
+                                <option value="" selected disabled>Selecione o mês</option>
+                                <option value="janeiro">Janeiro</option>
+                                <option value="fevereiro">Fevereiro</option>
+                                <option value="marco">Março</option>
+                                <option value="abril">Abril</option>
+                                <option value="maio">Maio</option>
+                                <option value="junho">Junho</option>
+                                <option value="julho">Julho</option>
+                                <option value="agosto">Agosto</option>
+                                <option value="setembro">Setembro</option>
+                                <option value="outubro">Outubro</option>
+                                <option value="novembro">Novembro</option>
+                                <option value="dezembro">Dezembro</option>
+                            </select>
+                        </div>
+                        <div class="formation-group">
+                            <label for="entrada-ano3">&nbsp;</label>
+                            <select id="entrada-ano3" name="entrada-ano3">
+                                <option value="" selected disabled>Selecione o ano</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="formation-row">
+                        <div class="formation-group">
+                            <label for="saida-mes3">Saída</label>
+                            <select id="saida-mes3" name="saida-mes3">
+                                <option value="" selected disabled>Selecione o mês</option>
+                                <option value="janeiro">Janeiro</option>
+                                <option value="fevereiro">Fevereiro</option>
+                                <option value="marco">Março</option>
+                                <option value="abril">Abril</option>
+                                <option value="maio">Maio</option>
+                                <option value="junho">Junho</option>
+                                <option value="julho">Julho</option>
+                                <option value="agosto">Agosto</option>
+                                <option value="setembro">Setembro</option>
+                                <option value="outubro">Outubro</option>
+                                <option value="novembro">Novembro</option>
+                                <option value="dezembro">Dezembro</option>
+                            </select>
+                        </div>
+                        <div class="formation-group">
+                            <label for="saida-ano3">&nbsp;</label>
+                            <select id="saida-ano3" name="saida-ano3">
+                                <option value="" selected disabled>Selecione o ano</option>
+                            </select>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="save">SALVAR</button>
+        </form>
+            <button class="back" onclick="window.location.href='login.html'">VOLTAR</button>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".accordion-btn");
+
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    // Fechar todas as outras seções abertas
+                    buttons.forEach(btn => {
+                        if (btn !== this && btn.classList.contains("active")) {
+                            btn.classList.remove("active");
+                            const panel = btn.nextElementSibling;
+                            panel.style.maxHeight = null;
+                        }
+                    });
+
+                    // Alternar a seção atual
+                    this.classList.toggle("active");
+                    const panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+
+                     // Função para gerar opções de ano dinamicamente
+        const currentYear = new Date().getFullYear();
+        const startYear = 1980;
+
+        function populateYearDropdown(id) {
+            const select = document.getElementById(id);
+            for (let year = startYear; year <= currentYear; year++) {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = year;
+                select.appendChild(option);
+            }
+        }
+
+        // Popula os dropdowns de ano para todas as empresas
+        populateYearDropdown('entrada-ano1');
+        populateYearDropdown('saida-ano1');
+        populateYearDropdown('entrada-ano2');
+        populateYearDropdown('saida-ano2');
+        populateYearDropdown('entrada-ano3');
+        populateYearDropdown('saida-ano3');
+
+
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

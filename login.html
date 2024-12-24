@@ -1,0 +1,128 @@
+<html>
+
+<head>
+    <title>
+        Entrar
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background-color: orange;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .container img {
+            height: 100px;
+        }
+
+        .container h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container a {
+            color: orange;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .form-container a:hover {
+            text-decoration: underline;
+        }
+
+        .form-container .btn {
+            background-color: orange;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: transform 0.5s ease;
+        }
+
+        .form-container .btn:hover {
+            background-color: orangered;
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+       <a href="index.html"><img alt="Logo" style="border-radius: 30px;" height="30" src="default.png" width="30" /></a>
+        <a href="index.html" style="text-decoration: none;"><h1>
+            Quero estágio
+        </h1></a>
+    </div>
+    <div class="container">
+        <img alt="Student Page Logo" style="border-radius: 15px;" height="100" src="default.png" width="100" />
+        <h2>
+            Página do aluno
+        </h2>
+        <div class="form-container">
+            <div style="display: flex; justify-content: space-between;">
+                <a href="index.html">
+                    Voltar para o site
+                </a>
+                <a href="cad_aluno.php">
+                    Não sou cadastrado
+                </a>
+            </div>
+            <input placeholder="E-mail" type="text" />
+            <input placeholder="Senha" type="password" />
+            <a href="#">
+                Esqueci minha senha
+            </a>
+            <button class="btn" style="margin-top: 10px;">
+                ENTRAR
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+<html>
+ <head>
+  <title>
+   Quero estágio
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: orange;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+        .header img {
+            height: 30px;
+            margin-right: 10px;
+        }
+        .header h1 {
+            font-size: 20px;
+            margin: 0;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: orange;
+            color: white;
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            padding-top: 20px;
+        }
+        .sidebar .profile {
+            padding: 10px 20px;
+            border-bottom: 1px solid orangered;
+        }
+        .sidebar .profile i {
+            margin-right: 10px;
+        }
+        .sidebar .profile p {
+            margin: 5px 0;
+        }
+        .sidebar .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar .menu li {
+            padding: 10px 20px;
+            border-bottom: 1px solid orangered;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar .menu li i {
+            margin-right: 10px;
+        }
+        .sidebar .menu li:hover {
+            background-color: orangered;
+            cursor: pointer;
+        }
+        
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+        .left-section {
+            width: 30%;
+            text-align: center;
+        }
+        .left-section img {
+            width: 80%;
+            border-radius: 5px;
+        }
+        .left-section .chat {
+            position: relative;
+            bottom: 30px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .right-section {
+            width: 70%;
+            padding-left: 20px;
+        }
+        .cabeca {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .cabeca .greeting {
+            font-size: 20px;
+            color: #0056b3;
+        }
+        .cabeca .id {
+            font-size: 14px;
+            color: #0056b3;
+        }
+        .card {
+            background-color: #e0e0e0;
+            padding: 20px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            width: 330px;
+        }
+        .card i {
+            font-size: 24px;
+            margin-right: 10px;
+            color: #0056b3;
+        }
+        .card span {
+            font-size: 18px;
+            color: #0056b3;
+        }
+
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Quero estágio logo" style="border-radius: 30px;" height="30" src="default.png" width="30"/>
+   <h1>
+    Quero estágio
+   </h1>
+  </div>
+
+  <div class="container">
+    <div class="left-section">
+     <img alt="Group of smiling people" height="400" src="pexels-norma-mortenson-8457722.jpg" width="700"/>
+     <div class="chat">
+      Chat
+     </div>
+    </div>
+    <div class="right-section">
+     <div class="cabeca">
+      <div class="greeting">
+       Olá, estudante!
+      </div>
+      <div class="id">
+       Id: 304959
+      </div>
+     </div>
+     <div class="card">
+      <i class="fas fa-list">
+      </i>
+      <span>
+       Entrevistas do dia 17/10
+      </span>
+     </div>
+     <div class="card">
+      <i class="fas fa-file-alt">
+      </i>
+      <span>
+       Meu currículo
+      </span>
+     </div>
+     <div class="card">
+      <i class="fas fa-bullhorn">
+      </i>
+      <span>
+       Avisos
+      </span>
+     </div>
+    </div>
+   </div>
+
+  <div class="sidebar">
+   <div class="profile">
+    <i class="fas fa-user">
+    </i>
+    <p>
+     #aluno
+    </p>
+    <p>
+     Id: 304959
+    </p>
+   </div>
+   <ul class="menu">
+    <li>
+     <i class="fas fa-calendar-day">
+     </i>
+     Entrevistas do dia 17/10
+    </li>
+    <li>
+     <i class="fas fa-calendar-alt">
+     </i>
+     Entrevistas agendadas
+    </li>
+    <li>
+     <i class="fas fa-briefcase">
+     </i>
+     Vagas do mês
+    </li>
+    <li>
+     <i class="fas fa-star">
+     </i>
+     Meus interesses
+    </li>
+    <li>
+     <i class="fas fa-file-alt">
+     </i>
+     Meu currículo
+    </li>
+    <li>
+     <i class="fas fa-comments">
+     </i>
+     Chat
+    </li>
+    <li>
+     <i class="fas fa-bullhorn">
+     </i>
+     Avisos
+    </li>
+    <li>
+     <i class="fas fa-question-circle">
+     </i>
+     Dúvidas Frequentes
+    </li>
+    <li>
+     <i class="fas fa-envelope">
+     </i>
+     Fale Conosco
+    </li>
+    <li>
+     <i class="fas fa-exclamation-triangle">
+     </i>
+     Excluir cadastro
+    </li>
+    <li>
+     <i class="fas fa-power-off">
+     </i>
+     Logoff
+    </li>
+   </ul>
+  </div>
+ </body>
+</html>

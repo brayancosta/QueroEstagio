@@ -1,0 +1,173 @@
+<html>
+ <head>
+  <title>
+   Atendimento Online
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(to right, #ffa500, #ff4500);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+        .header img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .header h1 {
+            font-size: 20px;
+            margin: 0;
+        }
+        .header .menu {
+            margin-left: auto;
+            font-size: 20px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .chat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .chat-header h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .chat-header button {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .chat-box {
+            height: 400px;
+            background-color: white;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            padding: 10px;
+            overflow-y: auto;
+        }
+        .chat-input {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-top: 1px solid #ddd;
+        }
+        .chat-input input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        .chat-input button {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+       
+
+
+        .chat-input input[type="file"] {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <img alt="Company Logo" style="border-radius: 30px;" src="default.png"/>
+   <h1>
+    Quero estágio
+   </h1>
+   <div class="menu">
+    <i class="fas fa-bars">
+    </i>
+   </div>
+  </div>
+  <div class="content">
+   <div class="chat-header">
+    <h2>
+     VAGAS DF
+    </h2>
+    <button>
+     Encerrar
+    </button>
+   </div>
+   <div class="chat-box">
+    <!-- Chat messages will appear here -->
+   </div>
+   <div class="chat-input">
+    <input placeholder="Mensagem..." type="text"/>
+    <button>
+     Mensagem
+    </button>
+    <input class="finder" type="file" value="Arquivo..."/>
+   </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const chatBox = document.querySelector('.chat-box');
+      const messageInput = document.querySelector('.chat-input input[type="text"]');
+      const sendButton = document.querySelector('.chat-input button');
+      const fileInput = document.querySelector('.chat-input input[type="file"]');
+  
+      // Envio de mensagem de texto
+      sendButton.addEventListener('click', function () {
+        const messageText = messageInput.value;
+        if (messageText.trim() !== "") {
+          const messageElement = document.createElement('div');
+          messageElement.textContent = messageText;
+          messageElement.classList.add('message');
+          chatBox.appendChild(messageElement);
+          messageInput.value = '';
+          chatBox.scrollTop = chatBox.scrollHeight;
+        }
+      });
+  
+      // Permitir envio de arquivos
+      fileInput.addEventListener('change', function () {
+        const file = fileInput.files[0];
+        if (file) {
+          const messageElement = document.createElement('div');
+          messageElement.textContent = `Arquivo enviado: ${file.name}`;
+          messageElement.classList.add('message');
+          chatBox.appendChild(messageElement);
+          chatBox.scrollTop = chatBox.scrollHeight;
+          fileInput.value = ''; // Limpar o input de arquivo
+        }
+      });
+  
+      // Permitir o envio de mensagens ao pressionar "Enter"
+      messageInput.addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+          sendButton.click();
+        }
+      });
+    });
+  </script>
+  
+  
+ </body>
+</html>

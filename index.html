@@ -1,0 +1,594 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Quero estágio
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+            /* Adiciona rolagem suave */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background-color: #fff;
+            margin-top: auto;
+        }
+
+        .header img {
+            height: 90px;
+            margin-left: 120px;
+        }
+
+        .header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: orangered;
+            font-weight: 500;
+            transition: text-decoration 0.3s;
+        }
+
+        .header nav a:hover {
+            text-decoration: underline;
+        }
+
+        .header .cta {
+            background-color: orange;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-right: 100px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        .header .cta:hover {
+            background-color: orange;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transform: scale(1.05);
+        }
+
+        .banner {
+            background-color: orangered;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 16px;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+        }
+
+        .main-content .text-content {
+            max-width: 50%;
+        }
+
+        .main-content .text-content h1 {
+            font-size: 36px;
+            color: #333;
+        }
+
+        .main-content .text-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .main-content .text-content ul li {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .main-content .text-content ul li i {
+            color: orange;
+            margin-right: 10px;
+        }
+
+        .main-content .image-content img {
+            max-width: 100%;
+        }
+
+        .form-container {
+            background-color: orange;
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+            max-width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-container h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-container form input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .form-container form button {
+            padding: 10px;
+            background-color: orangered;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .form-container form button:hover {
+            background-color: orangered;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+            font-size: 18px;
+        }
+
+        /* Styles for the second part of the page */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        h1 {
+            color: #1a2e6e;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        p.subtitle {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .step img {
+            width: 200px;
+            height: auto;
+            margin: 0 20px;
+        }
+
+        .step-content {
+            max-width: 500px;
+            text-align: left;
+        }
+
+        .step-number {
+            font-size: 24px;
+            color: orange;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .step-title {
+            font-size: 20px;
+            color: orange;
+            margin-bottom: 10px;
+        }
+
+        .step-description {
+            font-size: 16px;
+            color: #666;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img alt="Aliança logo" height="250" src="oie_transparent.png" width="100" />
+        <nav>
+            <a href="#candidatar">Como funciona</a>
+            <a href="#dois">Metodologia</a>
+            <a href="#tres">Diferencial</a>
+            <a href="#quatro">Vantagens</a>
+            <a href="#cinco">Perguntas frequentes</a>
+        </nav>
+        <a class="cta"
+            href="login.html">Login</a>
+    </header>
+    <div class="banner">
+        Marque uma entrevista hoje mesmo.
+    </div>
+    <div class="main-content">
+        <div class="image-content">
+            <img alt="Person sitting with a laptop"
+                src="https://www.shutterstock.com/image-photo/portrait-happy-student-showing-something-260nw-351436415.jpg"
+                width="400" />
+        </div>
+        <div class="text-content">
+            <h1>A sua oportunidade de estágio</h1>
+            <h1>está aqui.</h1>
+            <ul>
+                <li><i class="fas fa-check-square"></i>Vagas todos os dias.</li>
+                <li><i class="fas fa-check-square"></i>Totalmente gratuito.</li>
+                <li><i class="fas fa-check-square"></i>Atendimento prático.</li>
+                <li><i class="fas fa-check-square"></i> Horários flexíveis</li>
+            </ul>
+        </div>
+        <div class="form-container">
+            <h2>Agende uma entrevista 100% gratuita.</h2>
+            <p>Solicite mais informações</p>
+            <form>
+                <input placeholder="Nome" type="text" />
+                <input placeholder="E-mail" type="email" />
+                <input placeholder="WhatsApp" type="text" />
+                <button type="submit">Começar Agora</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container" id="candidatar">
+        <h1>Aqui você encontra uma oportunidade de estágio e marca uma entrevista de forma 100% online.</h1>
+        <p class="subtitle">Veja como se candidatar em 3 passos fáceis!</p>
+
+        <div class="step">
+            <img alt="Pessoa sentada com um laptop no colo, sorrindo e olhando para a tela"
+                src="https://aliancaamerica.com.br/wp-content/uploads/2022/01/passo-1.png" />
+            <div class="step-content">
+                <div class="step-number">01</div>
+                <div class="step-title">Faça seu cadastro.</div>
+                <div class="step-description">
+                    Clicando em login, preencha o formulário com seus dados e realize o acesso a área do candidato.
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <img alt="Laptop com uma videochamada de uma pessoa sorrindo"
+                src="https://aliancaamerica.com.br/wp-content/uploads/2022/01/passo-2.png" />
+            <div class="step-content">
+                <div class="step-number">02</div>
+                <div class="step-title">Procure por uma vaga.</div>
+                <div class="step-description">
+                    Após concluir o cadastro, você pode buscar oportunidades de estágio relacionadas ao seu curso. Ao
+                    encontrar uma vaga que se encaixe no seu perfil, selecione-a. Em seguida, um de nossos colaboradores
+                    irá atendê-lo(a) por meio do chat interativo e agendará uma entrevista com uma de nossas empresas
+                    parceiras.<br /><br />
+                    Se preferir, você também pode ser atendido(a) pelo nosso WhatsApp.
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <img alt="Gráfico com uma linha subindo, com fundo de um quadro branco com fórmulas matemáticas"
+                src="https://aliancaamerica.com.br/wp-content/uploads/2022/01/passo-3.png" />
+            <div class="step-content">
+                <div class="step-number">03</div>
+                <div class="step-title">Agende sua entrevista.</div>
+                <div class="step-description">
+                    Para finalizar, após a conclusão das duas primeiras etapas, você receberá, por chat ou WhatsApp, as
+                    informações sobre o endereço e o horário da entrevista.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="dois"
+        style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5; width: 100%; text-align: center; padding: 50px 0;">
+        <h1 style="font-size: 24px; color: #333; margin-bottom: 30px;">
+            Entenda como funcionam nossos 4 pilares para um resultado rápido e eficaz
+        </h1>
+        <div
+            style="display: flex; justify-content: space-between; margin-bottom: 50px; max-width: 80%; margin: 0 auto;">
+            <div
+                style="background-color: #fff; padding: 20px; width: 23%; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 5px; margin-bottom: 20px;">
+                <i class="fas fa-globe" style="font-size: 40px; color: #007bff; margin-bottom: 10px;"></i>
+                <h2 style="font-size: 18px; color: #333; margin-bottom: 10px;">Liberdade</h2>
+                <p style="font-size: 14px; color: #666;">Chega de perder tempo e dinheiro! Em nosso portal de estágios,
+                    você pode aprender e se desenvolver a qualquer hora e em qualquer lugar, seja pelo smartphone,
+                    computador ou tablet. Conecte-se com as melhores oportunidades de estágio e dê o primeiro passo rumo
+                    à sua carreira, aproveitando a flexibilidade que você merece.</p>
+            </div>
+            <div
+                style="background-color: #fff; padding: 20px; width: 23%; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 5px; margin-bottom: 20px;">
+                <i class="fas fa-clock" style="font-size: 40px; color: #007bff; margin-bottom: 10px;"></i>
+                <h2 style="font-size: 18px; color: #333; margin-bottom: 10px;">Flexibilidade</h2>
+                <p style="font-size: 14px; color: #666;">No seu tempo! Oferecemos oportunidades de estágio com horários
+                    flexíveis, permitindo que você ajuste sua experiência prática de acordo com sua disponibilidade.
+                    Assim, você pode conciliar seus estudos e outras atividades, aproveitando ao máximo cada momento da
+                    sua jornada profissional.</p>
+            </div>
+            <div
+                style="background-color: #00a2ff; color: #fff; padding: 20px; width: 23%; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 5px; margin-bottom: 20px;">
+                <i class="fas fa-chalkboard-teacher" style="font-size: 40px; color: #fff; margin-bottom: 10px;"></i>
+                <h2 style="font-size: 18px; color: #fff; margin-bottom: 10px;">Prática</h2>
+                <p style="font-size: 14px; color: #fff;">Você terá a chance de aprender na prática, desenvolver novas
+                    habilidades e esclarecer suas dúvidas. Nossos estágios são projetados para garantir que você tenha
+                    uma experiência enriquecedora e relevante, preparando-o para os desafios do mercado de trabalho.</p>
+            </div>
+            <div
+                style="background-color: #fff; padding: 20px; width: 23%; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 5px; margin-bottom: 20px;">
+                <i class="fas fa-user-friends" style="font-size: 40px; color: #007bff; margin-bottom: 10px;"></i>
+                <h2 style="font-size: 18px; color: #333; margin-bottom: 10px;">Proximidade</h2>
+                <p style="font-size: 14px; color: #666;">Aprenda com mentores dedicados que o acompanharão durante sua
+                    jornada de estágio. Assim, você garante um aprendizado mais personalizado e próximo, recebendo
+                    orientação e feedback que refletem suas necessidades e objetivos. Essa proximidade permite um
+                    desenvolvimento mais empático e eficaz, ajudando você a se destacar no mercado de trabalho.</p>
+            </div>
+        </div>
+        <div
+            style="background-color: orangered; padding: 30px; border-radius: 15px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); max-width: 80%; margin: 0 auto;">
+            <h2 style="font-size: 20px; color: #fff; margin-bottom: 10px;">Agende uma entrevista agora mesmo!</h2>
+            <p style="font-size: 14px; color: #fff; margin-bottom: 20px;">Conheça nossa metodologia na prática sem custo
+                algum.</p>
+            <form style="display: flex; justify-content: space-between;">
+                <input type="text" placeholder="Nome"
+                    style="width: 20%; padding: 10px; border: none; border-radius: 5px; margin-right: 10px;">
+                <input type="email" placeholder="E-mail"
+                    style="width: 20%; padding: 10px; border: none; border-radius: 5px; margin-right: 10px;">
+                <div
+                    style="display: flex; align-items: center; width: 20%; padding: 10px; border: none; border-radius: 5px; background-color: #fff; margin-right: 10px;">
+                    <img src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-RcpoXHkzChYnDbFAyeQ8tamr/user-ehrvabJ3DufsCu8YJ7PqY5gl/img-9KDcvG6ip7UGFafbfmWRCeHb.png"
+                        alt="Brazil flag" style="width: 20px; margin-right: 5px;">
+                    <input type="text" placeholder="+55 WhatsApp" style="border: none; outline: none; width: 100%;">
+                </div>
+                <button type="button"
+                    style="background-color: #00a2ff; color: #fff; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer;">Começar
+                    Agora</button>
+            </form>
+        </div>
+    </div>
+    <div id="tres"
+        style="font-family: Arial, sans-serif; background-color: #f5f7fa; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <div
+            style="display: flex; flex-direction: column; align-items: flex-start; background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 20px;">
+            <div style="display: flex; flex-direction: row; gap: 20px; width: 100%;">
+                <div style="flex: 1; margin-right: 20px;">
+                    <img alt="A smiling woman with curly hair, wearing a scarf and holding a smartphone, with colorful lights in the background"
+                        height="400" src="https://aliancaamerica.com.br/wp-content/uploads/2022/01/Diferenciais.png"
+                        width="400" style="width: 100%; border-radius: 10px;" />
+                </div>
+                <div style="flex: 2; display: flex; flex-direction: row; gap: 20px;">
+                    <div
+                        style="flex: 1; background-color: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                        <h2 style="font-size: 18px; margin: 0 0 10px 0;">Fugimos do tradicional:</h2>
+                        <p style="font-size: 14px; margin: 0;">O mundo mudou, as plataformas evoluíram e a forma de
+                            aprender também. Aqui no nosso portal de estágios, oferecemos oportunidades práticas, com
+                            experiências semanais, horários flexíveis e a comodidade de marcar um entrevista de forma
+                            100% gratuita. Prepare-se para uma nova abordagem que valoriza seu tempo e potencial!</p>
+                    </div>
+                    <div
+                        style="flex: 1; background-color: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                        <h2 style="font-size: 18px; margin: 0 0 10px 0;">Personalizamos o ensino:</h2>
+                        <p style="font-size: 14px; margin: 0;">Aliado ao nosso método, oferecemos uma experiência de
+                            estágio personalizada, o melhor caminho para superar suas principais dificuldades e
+                            desenvolver habilidades práticas em sua área de interesse. Aqui, você tem a oportunidade de
+                            aprender no seu tempo, recebendo orientação focada nas suas necessidades e objetivos, para
+                            que você se sinta preparado para os desafios do mercado.</p>
+                    </div>
+                    <div
+                        style="flex: 1; background-color: #ff4081; color: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                        <h2 style="font-size: 18px; margin: 0 0 10px 0;">Entregamos o melhor pra você:</h2>
+                        <p style="font-size: 14px; margin: 0;">Por meio de estágios práticos e interativos, priorizamos
+                            a dinamismo e eficiência, com mentores 100% dedicados ao seu desenvolvimento e às suas
+                            dúvidas. Afinal, são milhares de alunos que estão dando grandes passos em suas carreiras,
+                            aproveitando as melhores oportunidades do mercado. Junte-se a eles e comece sua trajetória
+                            de sucesso!</p>
+                    </div>
+                    <div
+                        style="flex: 1; background-color: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                        <h2 style="font-size: 18px; margin: 0 0 10px 0;">Ajustamos nossos horários:</h2>
+                        <p style="font-size: 14px; margin: 0;">Uma agenda apertada não é um problema para quem busca
+                            estágios em nosso portal. Aqui, ajustamos e flexibilizamos as oportunidades de acordo com a
+                            sua disponibilidade, permitindo que você concilie seus estudos e outras atividades.
+                            Aproveite a liberdade de moldar sua experiência prática conforme sua rotina!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="quatro"
+        style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f8f8f8; display: flex; flex-direction: column; align-items: center; padding: 20px;">
+        <div style="display: flex; justify-content: space-between; width: 100%; padding: 20px;">
+            <div style="width: 50%; padding: 20px;">
+                <p style="color: #000; font-size: 16px; margin-bottom: 20px;">
+                    Sabemos que o estágio é muito mais do que uma simples passagem do estudante pela empresa. É um
+                    momento crucial em que as organizações reconhecem o potencial do estudante e investem no
+                    desenvolvimento de suas habilidades práticas para o mercado de trabalho. Assim, as empresas não
+                    apenas acolhem um estagiário, mas ganham um colaborador proativo, interessado e comprometido com os
+                    objetivos da equipe. No nosso portal, oferecemos as conexões necessárias para que essa transformação
+                    aconteça. </p>
+                <h1 style="color: #4682b4; font-size: 24px; margin-bottom: 30px; ">Temos a vaga para você!</h1>
+                <a style="background-color: #4682b4; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 16px;"
+                    href="#">Quero me cadastrar</a>
+            </div>
+            <div style="width: 50%; text-align: center;">
+                <img alt="Mulher segurando um copo de café e um laptop, sorrindo" height="300"
+                    src="https://as2.ftcdn.net/v2/jpg/03/88/94/19/1000_F_388941905_0NjTRUeFAnFEojcn7z7RBZhNA0rVImx8.jpg"
+                    width="300" style="width: 100%; max-width: 300px; border-radius: 10px;" />
+            </div>
+        </div>
+        <div style="margin-top: 20px; width: 100%; text-align: center;">
+            <h2 style="color: #000; font-size: 24px; margin-bottom: 20px;">Vantagens</h2>
+            <div style="display: flex; justify-content: center; width: 100%;">
+                <div
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px; width: 33%;">
+                    <i class="fas fa-dollar-sign" style="font-size: 24px; color: #007bff; margin-right: 10px;"></i>
+                    <span style="color: #000; font-size: 16px;">Vagas remuneradas</span>
+                </div>
+                <div
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px; width: 33%;">
+                    <i class="fas fa-user" style="font-size: 24px; color: #007bff; margin-right: 10px;"></i>
+                    <span style="color: #000; font-size: 16px;">Cadastro gratuito</span>
+                </div>
+                <div
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px; width: 33%;">
+                    <i class="fas fa-users" style="font-size: 24px; color: #007bff; margin-right: 10px;"></i>
+                    <span style="color: #000; font-size: 16px;">Grupos de vagas</span>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: center; width: 100%;">
+                <div
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px; width: 33%;">
+                    <i class="fas fa-clock" style="font-size: 24px; color: #007bff; margin-right: 10px;"></i>
+                    <span style="color: #000; font-size: 16px;">Novas vagas todos os dias</span>
+                </div>
+                <div
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px; width: 33%;">
+                    <i class="fas fa-comments" style="font-size: 24px; color: #007bff; margin-right: 10px;"></i>
+                    <span style="color: #000; font-size: 16px;">Atendimento por chat</span>
+                </div>
+                <div
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px; width: 33%;">
+                    <i class="fas fa-trophy" style="font-size: 24px; color: #007bff; margin-right: 10px;"></i>
+                    <span style="color: #000; font-size: 16px;">As melhores vagas</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cinco"
+        style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff; max-width: 600px; margin: 0 auto; padding: 20px; text-align: center;">
+        <h1 style="color: #003366; font-size: 24px; margin-bottom: 20px;"> Perguntas frequentes </h1>
+        <div style="border-top: 1px solid #e0e0e0; padding: 15px 0; text-align: left; cursor: pointer; position: relative;"
+            onclick="toggleAnswer(this)">
+            Como funciona o portal de estágios?
+            <i class="fas fa-chevron-down" style="float: right; color: #003366;"></i>
+            <div class="faq-answer" style="display: none; padding: 10px 0; color: #666666;">O portal conecta estudantes
+                a empresas, facilitando o processo de busca e candidatura para vagas de estágio de acordo com o perfil e
+                as áreas de interesse dos candidatos.</div>
+        </div>
+        <div style="border-top: 1px solid #e0e0e0; padding: 15px 0; text-align: left; cursor: pointer; position: relative;"
+            onclick="toggleAnswer(this)">
+            Quais são os requisitos para se candidatar a uma vaga de estágio?
+            <i class="fas fa-chevron-down" style="float: right; color: #003366;"></i>
+            <div class="faq-answer" style="display: none; padding: 10px 0; color: #666666;">Cada vaga possui requisitos
+                específicos, como curso, período acadêmico e habilidades desejadas. Basta verificar as exigências da
+                vaga antes de se candidatar.</div>
+        </div>
+        <div style="border-top: 1px solid #e0e0e0; padding: 15px 0; text-align: left; cursor: pointer; position: relative;"
+            onclick="toggleAnswer(this)">
+            O portal é gratuito para estudantes e empresas?
+            <i class="fas fa-chevron-down" style="float: right; color: #003366;"></i>
+            <div class="faq-answer" style="display: none; padding: 10px 0; color: #666666;">Sim, o portal é gratuito
+                para estudantes. Para empresas, oferecemos planos gratuitos e pagos, dependendo da quantidade de vagas e
+                dos recursos desejados.</div>
+        </div>
+        <div style="border-top: 1px solid #e0e0e0; padding: 15px 0; text-align: left; cursor: pointer; position: relative;"
+            onclick="toggleAnswer(this)">
+            Como posso me cadastrar como estudante?
+            <i class="fas fa-chevron-down" style="float: right; color: #003366;"></i>
+            <div class="faq-answer" style="display: none; padding: 10px 0; color: #666666;">O cadastro é simples e
+                rápido. Basta preencher o formulário com seus dados pessoais, acadêmicos e profissionais, criar um
+                perfil e começar a buscar oportunidades.</div>
+        </div>
+        <div style="border-top: 1px solid #e0e0e0; padding: 15px 0; text-align: left; cursor: pointer; position: relative;"
+            onclick="toggleAnswer(this)">
+            Como as empresas podem divulgar suas vagas no portal?
+            <i class="fas fa-chevron-down" style="float: right; color: #003366;"></i>
+            <div class="faq-answer" style="display: none; padding: 10px 0; color: #666666;">As empresas podem criar um
+                perfil no portal, acessar o painel de controle e postar vagas de estágio com todas as informações
+                necessárias, como descrição da vaga, requisitos e benefícios.</div>
+        </div>
+        <div style="border-top: 1px solid #e0e0e0; padding: 15px 0; text-align: left; cursor: pointer; position: relative;"
+            onclick="toggleAnswer(this)">
+            Como garantir a segurança dos meus dados no portal?
+            <i class="fas fa-chevron-down" style="float: right; color: #003366;"></i>
+            <div class="faq-answer" style="display: none; padding: 10px 0; color: #666666;">Utilizamos as melhores
+                práticas de segurança e proteção de dados para garantir que suas informações pessoais estejam seguras e
+                não sejam compartilhadas sem seu consentimento.</div>
+        </div>
+        <div style="border-top: 1px solid #e0e0e0; padding: 15px 0; text-align: left; cursor: pointer; position: relative;"
+            onclick="toggleAnswer(this)">
+            É possível acompanhar o status da minha candidatura?
+            <i class="fas fa-chevron-down" style="float: right; color: #003366;"></i>
+            <div class="faq-answer" style="display: none; padding: 10px 0; color: #666666;">Sim, os estudantes podem
+                acompanhar o status de suas candidaturas diretamente no portal, verificando se foram selecionados para
+                entrevistas ou se o processo ainda está em andamento.</div>
+        </div>
+        <div style="border-top: 1px solid #e0e0e0; padding: 15px 0; text-align: left; cursor: pointer; position: relative;"
+            onclick="toggleAnswer(this)">
+            Quais são as áreas de estágio mais procuradas?
+            <i class="fas fa-chevron-down" style="float: right; color: #003366;"></i>
+            <div class="faq-answer" style="display: none; padding: 10px 0; color: #666666;">As áreas mais procuradas
+                costumam ser as de tecnologia, engenharia, administração, marketing e recursos humanos, mas o portal
+                oferece oportunidades em diversas áreas.</div>
+        </div>
+        <div style="border-top: 1px solid #e0e0e0; padding: 15px 0; text-align: left; cursor: pointer; position: relative;"
+            onclick="toggleAnswer(this)">
+            O portal oferece suporte para dúvidas ou problemas técnicos?
+            <i class="fas fa-chevron-down" style="float: right; color: #003366;"></i>
+            <div class="faq-answer" style="display: none; padding: 10px 0; color: #666666;">Sim, oferecemos suporte por
+                meio de chat online e e-mail para resolver dúvidas e ajudar com quaisquer problemas técnicos que possam
+                surgir.</div>
+        </div>
+        <div style="margin-top: 20px;">
+            <button
+                style="background-color: #00aaff; color: #ffffff; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer; margin-bottom: 20px;">
+                <i class="fab fa-whatsapp"></i> Tenho mais perguntas
+            </button>
+        </div>
+        <div style="background-color: #fff; padding: 20px; text-align: center; font-size: 14px; color: #666666;">
+            <img alt="Logo da Aliança" height="200" src="default.png" width="200" />
+            <div style="display: inline-block; text-align: left; margin-left: 10px; vertical-align: middle;">
+                <p>Participe de estágios, com uma imersão prática desde o primeiro dia na sua área de interesse. Tudo
+                    isso, com a conveniência de aprender com a orientação de mentores dedicados que estão prontos para
+                    apoiá-lo a cada passo do caminho!</p>
+                <p style="color: orangered; font-weight: bold;"> #VemparaQueroestágio </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleAnswer(element) {
+            const resposta = element.querySelector('.faq-answer');
+            const icon = element.querySelector('i');
+            if (resposta.style.display === 'block') {
+                resposta.style.display = 'none';
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+                icon.style.color ='#003366';
+            } else {
+                resposta.style.display = 'block';
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+                icon.style.color='green';
+            } 
+        }
+
+    </script>
+</body>
+
+</html>
